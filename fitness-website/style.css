@@ -1,0 +1,262 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b0f2a;
+    color:#fff;
+    padding-top:100px;
+}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:rgba(11,15,42,0.9);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.navbar nav a{
+    text-decoration:none;
+    color:#fff;
+    margin:0 15px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.navbar nav a:hover{
+    color:#7f5cff;
+}
+
+.btn{
+    background:linear-gradient(45deg,#7f5cff,#5b3bff);
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(127,92,255,0.4);
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:30px 80px;
+    
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    opacity:0.8;
+    margin-bottom:30px;
+}
+
+.stats{
+    display:flex;
+    gap:40px;
+    margin-bottom:30px;
+}
+
+.stats h3{
+    color:#7f5cff;
+}
+
+.image-container img{
+    width:450px;
+}
+
+.image-container::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur1020px; /* safari */
+    mask: linear-gradient(to bottom, transparent 60%, black 100%);
+    -webkit-mask: linear-gradient(to bottom, transparent 60%, black 100%);
+    pointer-events: none;
+}
+/* PROGRAMS */
+.programs{
+    padding:100px 80px;
+    text-align:center;
+}
+
+.programs h2{
+    font-size:36px;
+    margin-bottom:60px;
+}
+
+.program-cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.program-card{
+    width:300px;
+    padding:40px 25px;
+    border-radius:20px;
+    background:#151c44;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.program-card:hover{
+    background:linear-gradient(45deg,#7f5cff,#5b3bff);
+    transform:translateY(-10px);
+}
+
+/* TRAINERS */
+.trainers{
+    padding:100px 80px;
+    text-align:center;
+}
+
+.trainer-cards{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+}
+
+.trainer img{
+    width:250px;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+/* PRICING */
+.pricing{
+    padding:100px 80px;
+    text-align:center;
+}
+
+.price-cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:50px;
+}
+
+.price-card{
+    width:280px;
+    padding:40px 25px;
+    border-radius:20px;
+    background:#151c44;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.price-card:hover{
+    background:linear-gradient(45deg,#7f5cff,#5b3bff);
+    transform:translateY(-10px);
+}
+
+.price-card.active{
+    background:linear-gradient(45deg,#7f5cff,#5b3bff);
+}
+
+/* CONTACT */
+.contact{
+    padding:100px 80px;
+    text-align:center;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:40px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.05);
+    color:#fff;
+    outline:none;
+}
+
+.contact-form textarea{
+    min-height:150px;
+    resize:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#7f5cff;
+}
+
+.contact-form .btn{
+    align-self:center;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#090c20;
+    margin-top:50px;
+    font-size:14px;
+    opacity:0.7;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+    }
+
+    .program-cards,
+    .price-cards,
+    .trainer-cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .form-group{
+        flex-direction:column;
+    }
+}
